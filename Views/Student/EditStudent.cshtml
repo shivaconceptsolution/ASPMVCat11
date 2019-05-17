@@ -1,0 +1,35 @@
+﻿@model DatabaseConnectivityExample.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditStudent</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+        <table>
+            <tr><td>RNO</td><td>@Html.TextBoxFor(a=>a.Id)</td></tr>
+            <tr><td>NAME</td><td>@Html.TextBoxFor(a => a.Name)</td></tr>
+            <tr><td>BRANCH</td><td>@Html.TextBoxFor(a => a.Branch)</td></tr>
+            <tr><td>FEES</td><td>@Html.TextBoxFor(a => a.Fees)</td></tr>
+            <tr><td></td><td><input type="submit" name="btnsubmit" value="Update" /> </td></tr>
+
+
+
+
+        </table>
+
+
+
+
+        }
+    </div>
+</body>
+</html>

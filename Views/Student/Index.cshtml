@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DatabaseConnectivityExample.Models.Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>VIEW STUDENT RECORD</h1>
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tr><th>RNO </th><th>NAME</th><th>BRANCH</th><th>FEES</th></tr>
+            @foreach(var item in Model)
+            {
+                <tr><td>@Html.DisplayFor(a=>item.Id) </td><td>@Html.DisplayFor(a => item.Name)</td><td>@Html.DisplayFor(a => item.Branch)</td><td>@Html.DisplayFor(a => item.Fees)</td>
+            
+                <td>@Html.ActionLink("Edit","EditStudent",new {@id=item.Id})</td><td>@Html.ActionLink("Delete", "DeleteStudent", new { @id = item.Id })</td>
+            </tr>
+            }
+
+
+        </table>
+        @Html.ActionLink("Add NEW Student","AddStudent")
+    </div>
+</body>
+</html>
