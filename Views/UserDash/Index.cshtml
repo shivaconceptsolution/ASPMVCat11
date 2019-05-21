@@ -1,0 +1,27 @@
+﻿@model DatabaseConnectivityExample.Models.Reg
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <a href="/Student/Index">View Student </a><a href="/UserDash/Logout">Logout</a>
+    <div> 
+        <h1>Welcome in USER DASHBOARD</h1>
+        <table>
+            <tr><td>Email</td><td> @Html.DisplayFor(a=>a.Email)</td></tr>
+            <tr><td>Password</td><td>@Html.DisplayFor(a=>a.Pass)</td></tr>
+            <tr><td>Mobile</td><td>@Html.DisplayFor(a=>a.Mobile)</td></tr>
+            
+
+
+        </table>
+    </div>
+</body>
+</html>

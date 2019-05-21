@@ -1,0 +1,35 @@
+﻿@model DatabaseConnectivityExample.Models.Reg
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr><th>Enter Email ID</th><td>@Html.TextBoxFor(a => a.Email)</td></tr>
+                <tr><th>Enter Password</th><td>@Html.PasswordFor(a => a.Pass)</td></tr>
+
+                <tr><td colspan="2"><input type="submit" name="btnsubmit" value="Login" /> </td></tr>
+
+
+            </table>
+
+        }
+
+        @ViewBag.data
+
+        <br />
+        @Html.ActionLink("NEW USER REGISTER HERE", "Index")
+
+    </div>
+</body>
+</html>
