@@ -1,0 +1,25 @@
+﻿@model   IEnumerable<DatabaseConnectivityExample.Models.Doctor>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewAppointMent</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr><th>Patient Id </th><th>Patient Name </th><th>Doctor Id </th><th>Doctorname </th><th>Medicinename </th></tr>
+            @foreach (var item in Model)
+            {
+
+            <tr><td>@Html.DisplayFor(a => item.Patient.PatientId)</td><td>@Html.DisplayFor(a => item.Patient.Patientname)</td><td>@Html.DisplayFor(a => item.Doctorname)</td><td>@Html.DisplayFor(a => item.Medicinename)</td><td>@Html.DisplayFor(a => item.DoctorFees)</td></tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model DatabaseConnectivityExample.Models.AppointMent
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+        <table>
+            <tr><td>Patient Id</td><td>@Html.TextBoxFor(a => a.PateientId)</td><td>Patient Name</td><td>@Html.TextBoxFor(a => a.PatirntName)</td></tr>
+            <tr><td>Patient Contact</td><td>@Html.TextBoxFor(a => a.ContactNumber)</td><td>Visiting Date</td><td>@Html.TextBoxFor(a => a.VisitingDate)</td></tr>
+            <tr><td>Doctor Id</td><td>@Html.TextBoxFor(a => a.DoctorId)</td><td>Doctor Name</td><td>@Html.TextBoxFor(a => a.DoctorName)</td></tr>
+            <tr><td>Medicine Name</td><td>@Html.TextBoxFor(a => a.MedicineName)</td><td>Doctor Fees </td><td>@Html.TextBoxFor(a=>a.DoctorFee)</td></tr>
+            <tr><td colspan="4"><input type="submit" name="btnsubmit" value="Submit" /></td></tr>
+        </table>
+
+
+        @ViewBag.data
+
+        }
+    </div>
+</body>
+</html>
