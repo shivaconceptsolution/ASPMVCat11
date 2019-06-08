@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Index", "FileUploaExample", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <p>Select File Name</p>
+            <p><input type="file" name="file" /></p>
+            <p><input type="submit" name=""</p>
+
+        }
+        @Html.ActionLink("View Image","ViewImage")
+    </div>
+</body>
+</html>
