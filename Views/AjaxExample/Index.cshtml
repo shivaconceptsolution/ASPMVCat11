@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script>
+        function display(a) {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                document.getElementById("res").innerHTML = xmlhttp.responseText;
+            }
+            xmlhttp.open("POST", "AjaxExample/Search/"+a, true);
+            xmlhttp.send();
+        }
+
+    </script>
+</head>
+<body>
+    <div> 
+        <input type="text" onkeyup="display(this.value)" />
+        <br />
+        <div id="res"></div>
+    </div>
+</body>
+</html>
