@@ -23,7 +23,8 @@
 </head>
 <body>
     <div> 
-        <input type="text" onkeyup="display(this.value)" />
+        @*<input type="text" onkeyup="display(this.value)" />*@
+        @Html.DropDownList("data", null,new {onchange="display(this.value)"})
         <br />
         <div id="res"></div>
     </div>

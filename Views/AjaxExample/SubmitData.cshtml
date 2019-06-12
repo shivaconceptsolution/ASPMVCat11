@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "SubmitData";
+}
+<script>
+    function create() {
+        rno = document.getElementById("txtrno").value;
+        name = document.getElementById("txtname").value;
+        branch = document.getElementById("txtbranch").value;
+        fees = document.getElementById("txtfees").value;
+       
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            document.getElementById("res").innerHTML = xmlhttp.responseText;
+        }
+        xmlhttp.open("POST", "AjaxExample/InsertData?rno=" + rno + "&name=" + name + "&branch=" + branch+"&fees="+fees, true);
+        xmlhttp.send();
+    }
+
+</script>
+<h2>SubmitData</h2>
+
+<input type="text" id="txtrno" />
+<br />
+<input type="text" id="txtname" />
+<br />
+<input type="text" id="txtbranch" />
+<br />
+<input type="text" id="txtfees" />
+
+<br />
+<input type="button" value="Click" onclick="create()" />
+<br />
+<div id="res"></div>
